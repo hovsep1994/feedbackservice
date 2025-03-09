@@ -1,7 +1,7 @@
 package com.jambit.feedbackservice.controller;
 
-import com.jambit.feedbackservice.entity.PlaceEntity;
-import com.jambit.feedbackservice.service.PlaceService;
+import com.jambit.feedbackservice.repository.entity.PlaceEntity;
+import com.jambit.feedbackservice.service.place.PlaceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

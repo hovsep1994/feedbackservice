@@ -1,8 +1,7 @@
 package com.jambit.feedbackservice.mapper;
 
-import com.jambit.feedbackservice.entity.FeedbackEntity;
+import com.jambit.feedbackservice.repository.entity.FeedbackEntity;
 import com.jambit.feedbackservice.model.feedback.FeedbackResponseModel;
-import org.hibernate.annotations.Comment;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

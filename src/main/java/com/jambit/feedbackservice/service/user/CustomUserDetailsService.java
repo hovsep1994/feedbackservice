@@ -1,6 +1,6 @@
 package com.jambit.feedbackservice.service.user;
 
-import com.jambit.feedbackservice.entity.UserEntity;
+import com.jambit.feedbackservice.repository.entity.UserEntity;
 import com.jambit.feedbackservice.repository.UserRepository;
 import com.jambit.feedbackservice.security.SecurityUser;
 import lombok.RequiredArgsConstructor;

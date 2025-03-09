@@ -2,8 +2,7 @@ package com.jambit.feedbackservice.controller;
 
 import com.jambit.feedbackservice.model.feedback.FeedbackRequestModel;
 import com.jambit.feedbackservice.model.feedback.FeedbackResponseModel;
-import com.jambit.feedbackservice.service.FeedbackService;
-import com.jambit.feedbackservice.service.user.UserService;
+import com.jambit.feedbackservice.service.feedback.FeedbackService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

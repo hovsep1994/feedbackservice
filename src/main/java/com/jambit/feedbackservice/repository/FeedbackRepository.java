@@ -1,6 +1,6 @@
 package com.jambit.feedbackservice.repository;
 
-import com.jambit.feedbackservice.entity.FeedbackEntity;
+import com.jambit.feedbackservice.repository.entity.FeedbackEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.jambit.feedbackservice.entity;
+package com.jambit.feedbackservice.repository.entity;
 
 import com.jambit.feedbackservice.constant.PlaceType;
 import jakarta.persistence.*;

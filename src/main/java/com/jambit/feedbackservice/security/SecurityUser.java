@@ -1,6 +1,6 @@
 package com.jambit.feedbackservice.security;
 
-import com.jambit.feedbackservice.entity.UserEntity;
+import com.jambit.feedbackservice.repository.entity.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

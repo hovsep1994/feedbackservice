@@ -1,7 +1,6 @@
-package com.jambit.feedbackservice.service;
+package com.jambit.feedbackservice.service.place;
 
-import com.jambit.feedbackservice.constant.PlaceType;
-import com.jambit.feedbackservice.entity.PlaceEntity;
+import com.jambit.feedbackservice.repository.entity.PlaceEntity;
 import com.jambit.feedbackservice.error.EntityNotFoundException;
 import com.jambit.feedbackservice.repository.PlaceRepository;
 import lombok.RequiredArgsConstructor;

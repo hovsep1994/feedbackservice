@@ -1,11 +1,12 @@
-package com.jambit.feedbackservice.service;
+package com.jambit.feedbackservice.service.feedback;
 
-import com.jambit.feedbackservice.entity.FeedbackEntity;
-import com.jambit.feedbackservice.entity.UserEntity;
+import com.jambit.feedbackservice.repository.entity.FeedbackEntity;
+import com.jambit.feedbackservice.repository.entity.UserEntity;
 import com.jambit.feedbackservice.mapper.FeedbackMapper;
 import com.jambit.feedbackservice.model.feedback.FeedbackRequestModel;
 import com.jambit.feedbackservice.model.feedback.FeedbackResponseModel;
 import com.jambit.feedbackservice.repository.FeedbackRepository;
+import com.jambit.feedbackservice.service.place.PlaceService;
 import com.jambit.feedbackservice.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

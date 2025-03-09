@@ -1,6 +1,5 @@
-package com.jambit.feedbackservice.entity;
+package com.jambit.feedbackservice.repository.entity;
 
-import com.jambit.feedbackservice.constant.PlaceType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -43,5 +42,5 @@ public class FeedbackEntity {
     private Integer score;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createTime = LocalDateTime.now();
+    private LocalDateTime createTime;
 }

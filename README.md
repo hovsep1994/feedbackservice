@@ -15,7 +15,7 @@ Uses **Spring Security (Basic Authentication)**, **Spring Data JPA**, **Flyway**
 ---
 
 ## **📌 Tech Stack**
-- **Java 17+**
+- **Java 23**
 - **Spring Boot 3.4+**
 - **Spring Security (Basic Auth)**
 - **Spring Data JPA**

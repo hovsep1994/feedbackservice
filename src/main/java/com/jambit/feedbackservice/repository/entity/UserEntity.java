@@ -1,4 +1,4 @@
-package com.jambit.feedbackservice.entity;
+package com.jambit.feedbackservice.repository.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -31,10 +31,10 @@ public class UserEntity {
     private String password;
 
     @Column(name = "create_time", nullable = false, updatable = false)
-    private LocalDateTime createTime = LocalDateTime.now();
+    private LocalDateTime createTime;
 
     @Column(name = "last_update_time")
-    private LocalDateTime lastUpdateTime = LocalDateTime.now();
+    private LocalDateTime lastUpdateTime;
 
     @PreUpdate
     public void preUpdate() {

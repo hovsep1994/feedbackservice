@@ -1,6 +1,6 @@
 package com.jambit.feedbackservice.repository;
 
-import com.jambit.feedbackservice.entity.UserEntity;
+import com.jambit.feedbackservice.repository.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
