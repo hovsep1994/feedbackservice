@@ -12,20 +12,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/feedbacks")
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class FeedbackController {
 
     private final FeedbackService feedbackService;
 
-    @PostMapping
+    @PostMapping("feedbacks")
     public ResponseEntity<String> create(@Valid @RequestBody FeedbackRequestModel request) {
-        // Submit feedback
         feedbackService.create(request);
         return ResponseEntity.ok("Feedback submitted successfully.");
     }
 
-    @GetMapping("/places/{placeId}")
+    @GetMapping("/places/{placeId}/feedbacks")
     public ResponseEntity<List<FeedbackResponseModel>> getFeedbacks(@PathVariable Long placeId) {
         return ResponseEntity.ok(feedbackService.getFeedbackByPlace(placeId));
     }

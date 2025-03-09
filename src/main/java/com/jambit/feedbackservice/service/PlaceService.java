@@ -19,7 +19,7 @@ public class PlaceService {
                 .orElseThrow(() -> new EntityNotFoundException("Place not found"));
     }
 
-    public List<PlaceEntity> findByPlaceType(PlaceType placeType) {
-        return placeRepository.findByPlaceType(placeType);
+    public List<PlaceEntity> findAll() {
+        return placeRepository.findAll();
     }
 }
