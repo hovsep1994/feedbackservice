@@ -34,15 +34,15 @@ cd customer-feedback-service
 
 ### **2️⃣ Run PostgreSQL Using Docker**
 ```sh
-docker run --name feedback-db -e POSTGRES_USER=feedback_user -e POSTGRES_PASSWORD=feedback_pass -e POSTGRES_DB=feedback_db -p 5432:5432 -d postgres
+docker run --name feedback-db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=feedback_db -p 5432:5432 -d postgres
 ```
 
 ### **3️⃣ Configure `application.properties`**
 Edit `src/main/resources/application.properties` if needed:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/feedback_db
-spring.datasource.username=feedback_user
-spring.datasource.password=feedback_pass
+spring.datasource.username=postgres
+spring.datasource.password=postgres
 spring.datasource.driver-class-name=org.postgresql.Driver
 ```
 
@@ -77,7 +77,7 @@ curl -X GET http://localhost:8080/api/places
 #### **🔹 Submit Feedback (Authenticated User)**
 ```sh
 curl -X POST http://localhost:8080/api/feedbacks \
-     -u user1@example.com:password123 \
+     -u user@example.com:password123 \
      -H "Content-Type: application/json" \
      -d '{
            "title": "Awesome Pizza!",
