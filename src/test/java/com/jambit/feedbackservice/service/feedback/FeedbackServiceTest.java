@@ -1,5 +1,6 @@
 package com.jambit.feedbackservice.service.feedback;
 
+import com.jambit.feedbackservice.constant.PlaceType;
 import com.jambit.feedbackservice.repository.entity.FeedbackEntity;
 import com.jambit.feedbackservice.repository.entity.PlaceEntity;
 import com.jambit.feedbackservice.repository.entity.UserEntity;
@@ -56,6 +57,7 @@ class FeedbackServiceTest {
         place = PlaceEntity.builder()
                 .id(1L)
                 .name("Pizza Palace")
+                .placeType(PlaceType.RESTAURANT)
                 .build();
 
         feedbackRequest = new FeedbackRequestModel();

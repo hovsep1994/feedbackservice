@@ -123,7 +123,7 @@ class UserServiceTest {
                 userService.getCurrentUser()
         );
 
-        assertEquals("User not logged in", exception.getMessage());
+        assertEquals("User not found", exception.getMessage());
 
         // Verify repository interaction
         verify(userRepository, times(1)).findByEmail("unknown@example.com");

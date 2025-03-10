@@ -1,9 +1,11 @@
 package com.jambit.feedbackservice.service.place;
 
 import com.jambit.feedbackservice.constant.PlaceType;
-import com.jambit.feedbackservice.repository.entity.PlaceEntity;
 import com.jambit.feedbackservice.error.EntityNotFoundException;
+import com.jambit.feedbackservice.mapper.PlaceMapper;
+import com.jambit.feedbackservice.model.place.PlaceResponseModel;
 import com.jambit.feedbackservice.repository.PlaceRepository;
+import com.jambit.feedbackservice.repository.entity.PlaceEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,6 +24,9 @@ class PlaceServiceTest {
 
     @Mock
     private PlaceRepository placeRepository;
+
+    @Mock
+    private PlaceMapper placeMapper;
 
     @InjectMocks
     private PlaceService placeService;
@@ -73,20 +78,27 @@ class PlaceServiceTest {
 
     @Test
     void shouldReturnAllPlaces() {
+        PlaceEntity place1 = new PlaceEntity(2L, "Burger Heaven", PlaceType.RESTAURANT);
         List<PlaceEntity> places = List.of(
                 place,
-                new PlaceEntity(2L, "Burger Heaven", PlaceType.RESTAURANT)
+                place1
+        );
+        List<PlaceResponseModel> responseModels = List.of(
+                new PlaceResponseModel(place.getId(), place.getName(), place.getPlaceType()),
+                new PlaceResponseModel(place1.getId(), place1.getName(), place1.getPlaceType())
         );
 
         // Mock repository behavior
         when(placeRepository.findAll()).thenReturn(places);
+        when(placeMapper.convert(places)).thenReturn(responseModels);
 
         // Call service method
-        List<PlaceEntity> result = placeService.findAll();
+        List<PlaceResponseModel> result = placeService.findAll();
 
         // Assertions
         assertNotNull(result);
         assertEquals(2, result.size());
+        assertEquals(responseModels, result);
 
         // Verify repository interaction
         verify(placeRepository, times(1)).findAll();

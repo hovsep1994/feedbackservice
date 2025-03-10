@@ -1,6 +1,6 @@
 package com.jambit.feedbackservice.controller;
 
-import com.jambit.feedbackservice.repository.entity.PlaceEntity;
+import com.jambit.feedbackservice.model.place.PlaceResponseModel;
 import com.jambit.feedbackservice.service.place.PlaceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ public class PlaceController {
     private final PlaceService placeService;
 
     @GetMapping
-    public ResponseEntity<List<PlaceEntity>> getAllPlaces() {
+    public ResponseEntity<List<PlaceResponseModel>> getAllPlaces() {
         return ResponseEntity.ok(placeService.findAll());
     }
 }
